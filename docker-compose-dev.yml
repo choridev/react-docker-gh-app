@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /workspace/node_modules
+      - ./:/workspace
+  tests:
+    stdin_open: true
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /workspace/node_modules
+      - ./:/workspace
+    command: ["npm", "run", "test"]
