@@ -16,4 +16,4 @@ services:
     volumes:
       - /workspace/node_modules
       - ./:/workspace
-    command: ["npm", "run", "test"]
+    command: ["npm", "test"]
