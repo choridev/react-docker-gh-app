@@ -1,4 +1,4 @@
-FROM node:alphine as builder
+FROM node as builder
 
 WORKDIR /workspace
 
